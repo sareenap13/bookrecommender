@@ -1,5 +1,5 @@
 streamlit
-pandas
-numpy
+pandas==2.3.3
+numpy==2.0.2
 scikit-learn
 rapidfuzz
