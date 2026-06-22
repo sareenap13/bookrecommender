@@ -184,7 +184,7 @@ with st.sidebar:
 
 # page title
 st.title("📚 Book Recommender")
-st.caption("Netflix-style personalized book discovery")
+st.caption("Personalized book discovery")
 st.divider()
 
 # check data
