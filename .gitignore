@@ -1,0 +1,29 @@
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# virtual environments
+.venv/
+venv/
+env/
+.idea/
+
+# streamlit
+.streamlit/secrets.toml
+
+# personal data
+data/goodreads.csv
+data/user_vector.npy
+
+# raw datasets
+data/catalog.csv
+data/book_metadata.csv
+data/failed_books.csv
+
+# test files
+src/test_api.py
+
+# mac files
+.DS_Store
