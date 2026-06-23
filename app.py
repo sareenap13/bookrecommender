@@ -167,13 +167,20 @@ def score_catalog(user_vec_bytes: bytes, read_titles: tuple):
 with st.sidebar:
     st.header("Your Goodreads Data")
 
-    uploaded = st.file_uploader("Upload Goodreads CSV", type="csv")
+    uploaded = st.file_uploader(
+        "Upload your Goodreads export CSV",
+        type="csv"
+    )
 
     if uploaded:
-        st.session_state.gr_bytes = uploaded.read()
-        st.session_state.dismissed = set()
-        st.session_state.selected_book = None
-        st.rerun()
+        new_bytes = uploaded.getvalue()
+
+        if new_bytes != st.session_state.get("gr_bytes"):
+            st.session_state.gr_bytes = new_bytes
+            st.session_state.dismissed = set()
+            st.session_state.selected_book = None
+            st.session_state.using_default = False
+            st.rerun()
 
     if st.session_state.get("using_default"):
         st.caption("Using default dataset")
