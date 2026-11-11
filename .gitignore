@@ -27,3 +27,7 @@ src/test_api.py
 
 # mac files
 .DS_Store
+
+# study data and backups
+data/study_results.csv
+data/catalog_with_embeddings_backup.pkl
